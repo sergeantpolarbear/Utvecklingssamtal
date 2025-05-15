@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utvecklingssamtal – Filip</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="topbar">
+        <bold><a href="#" onclick="showSection('start');return false">Filips Utv.samtal</a></bold>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="menu" id="menu">
+            <a href="/" onclick="showSection('start');return false;">Startsida</a>
+            <a href="/" onclick="showSection('kurser');return false;">Kurser</a>
+            <a href="/" onclick="showSection('narvaro');return false;">Närvaro</a>
+            <a href="/" onclick="showSection('larare');return false;">Lärare</a>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Startsidan -->
+        <section id="start" class="section active">
+            <div class="grid-thicc">
+                <div class="card-thicc">
+                    <h2>Utvecklingssamtal</h2>
+                    <p>Här ser du dina kurser, närvaro och lärare. Klicka runt eller använd browserns fram/bak-knappar.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-start">
+                <div class="card">
+                    <h2>Välkommen!</h2>
+                    <p>Här ser du dina kurser, närvaro och lärare. Klicka runt eller använd browserns fram/bak-knappar.
+                    </p>
+                </div>
+                <div class="card">
+                    <h2>Översikt</h2>
+                    <table>
+                        <tr>
+                            <th>Kurser</th>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <th>Närvaro</th>
+                            <td>95.9%</td>
+                        </tr>
+                        <tr>
+                            <th>Betyg</th>
+                            <td>D - C</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kurslista 4x2 -->
+        <section id="kurser" class="section">
+            <div class="card">
+                <h2>Mina kurser</h2>
+                <div class="course-grid">
+                    <div class="course-card course-matematik" onclick="showSection('matematik')">Matematik</div>
+                    <div class="course-card course-svenska" onclick="showSection('svenska')">Svenska</div>
+                    <div class="course-card course-engelska" onclick="showSection('engelska')">Engelska</div>
+                    <div class="course-card course-ai" onclick="showSection('ai')">AI</div>
+                    <div class="course-card course-programmering" onclick="showSection('programmering')">Programmering
+                    </div>
+                    <div class="course-card course-fysik" onclick="showSection('fysik')">Fysik</div>
+                    <div class="course-card course-webbutveckling" onclick="showSection('webbutveckling')">
+                        Webbutveckling</div>
+                    <div class="course-card course-daodac" onclick="showSection('daodac')">Dator och nätverksteknik
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kursdetaljer -->
+        <section id="matematik" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Matematik</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Carl Engman</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Gul</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra integraler och derivata</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="svenska" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Svenska</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Natalie Zack</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Grön</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra skriv- och läsförståelse</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="engelska" class="section">
+            <div class="course-detail">
+                <a href="/" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Engelska</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Alexander Hudberg</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Grön</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra hör- och läsförståelse</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="ai" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>AI</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Johan Erik Kateby</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Grön</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra teori och historia inom AI</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="programmering" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Programmering</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Mikael Bergström</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Grön</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra kodstruktur, logik och syntax</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="fysik" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Fysik</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Christian Killiner</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Röd</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Inte ha rött i fysik</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="webbutveckling" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Webbutveckling</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Johan Erik Kateby</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Grön</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra säkerhet och tester</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="daodac" class="section">
+            <div class="course-detail">
+                <a href="#" class="back-btn" onclick="showSection('kurser');return false;">← Tillbaka</a>
+                <h2>Dator och nätverksteknik</h2>
+                <table>
+                    <tr>
+                        <th>Lärare</th>
+                        <td>Carl Engman</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Grön</td>
+                    </tr>
+                    <tr>
+                        <th>Mål</th>
+                        <td>Förbättra kunskapen om vart applikationer kan användas</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Närvaro -->
+        <section id="narvaro" class="section">
+            <div class="card">
+                <h2>Närvaro</h2>
+                <p id="total-narvaro">Total närvaro: 95.9%</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vecka</th>
+                            <th>Total närvaro</th>
+                            <th>Oanmäld frånvaro</th>
+                            <th>Anmäld frånvaro</th>
+                            <th>Närvaro</th>
+                            <th>Sen ankomst</th>
+                            <th>Frånvarande</th>
+                            <th>Föranmäld</th>
+                        </tr>
+                    </thead>
+                    <tbody id="narvaro-body">
+                        <!-- rows injected här -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Lärare -->
+        <section id="larare" class="section">
+            <div class="card">
+                <h2>Lärare</h2>
+                <table>
+                    <tr>
+                        <th>Ämne</th>
+                        <th>Lärare</th>
+                    </tr>
+                    <tr>
+                        <td>Matematik</td>
+                        <td>Carl Engman</td>
+                    </tr>
+                    <tr>
+                        <td>Svenska</td>
+                        <td>Natalie Zack</td>
+                    </tr>
+                    <tr>
+                        <td>Engelska</td>
+                        <td>Alexander Hudberg</td>
+                    </tr>
+                    <tr>
+                        <td>AI</td>
+                        <td>Johan Erik Kateby</td>
+                    </tr>
+                    <tr>
+                        <td>Programmering</td>
+                        <td>Mikael Bergström</td>
+                    </tr>
+                    <tr>
+                        <td>Fysik</td>
+                        <td>Christian Killiner</td>
+                    </tr>
+                    <tr>
+                        <td>Webbutveckling</td>
+                        <td>Johan Erik Kateby</td>
+                    </tr>
+                    <tr>
+                        <td>Dator och nätverksteknik</td>
+                        <td>Carl Engman</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Kontakt: filip@skolexempel.se
+    </footer>
+</body>
+
+</html>

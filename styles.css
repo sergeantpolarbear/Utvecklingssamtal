@@ -1,0 +1,310 @@
+:root {
+    --bg: #f0f2f5;
+    --white: #ffffff;
+    --primary: #000000;
+    --accent: #333333;
+    --text: #333333;
+    --radius: 8px;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: 0.25s ease;
+    --font: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.topbar {
+    background: var(--white);
+    padding: .75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topbar a {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 3.5rem;
+    right: 1.5rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+}
+
+.menu a {
+    padding: .75rem 1.25rem;
+    transition: background var(--transition);
+    font-size: 1rem;
+}
+
+.menu a:hover {
+    background: #f0f0f0;
+}
+
+main {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.section {
+    display: none;
+    animation: fade-in var(--transition);
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid-start {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.185);
+}
+
+.card h2 {
+    margin-bottom: .5rem;
+    color: var(--primary);
+}
+
+.grid-thicc {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-thicc {
+    background: var(--white);
+    padding: 1.25rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-thicc h2 {
+    margin-bottom: .5rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+    /* tvingar jämna höjder */
+}
+
+.course-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    place-items: top;
+    padding-top: 50px;
+    justify-content: center;
+    color: #000000;
+    font-weight: 600;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    transition: transform var(--transition), box-shadow var(--transition);
+    aspect-ratio: 4 / 3;
+    max-width: 300px;
+    /* eller 320px, 360px – testa vad som ser bäst ut */
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-matematik {
+    background: url('https://via.placeholder.com/400x300/4a90e2/fff?text=Matte') center/cover;
+}
+
+.course-svenska {
+    background: url('https://via.placeholder.com/400x300/50e3c2/fff?text=Svenska') center/cover;
+}
+
+.course-engelska {
+    background: url('https://via.placeholder.com/400x300/f5a623/fff?text=Engelska') center/cover;
+}
+
+.course-ai {
+    background: url('https://via.placeholder.com/400x300/b8e986/fff?text=NO') center/cover;
+}
+
+.course-programmering {
+    background: url('https://via.placeholder.com/400x300/d0021b/fff?text=SO') center/cover;
+}
+
+.course-fysik {
+    background: url('https://via.placeholder.com/400x300/9013fe/fff?text=fysik') center/cover;
+}
+
+.course-webbutveckling {
+    background: url('https://via.placeholder.com/400x300/7ed321/fff?text=Idrott') center/cover;
+}
+
+.course-daodac {
+    background: url('https://via.placeholder.com/400x300/f8e71c/333?text=Bild') center/cover;
+}
+
+.course-detail {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 700px;
+    margin: auto;
+}
+
+.course-detail h2 {
+    margin-bottom: .75rem;
+    color: var(--accent);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+footer {
+    background: #222;
+    color: #aaa;
+    text-align: center;
+    padding: .75rem;
+    font-size: .85rem;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 850px) {
+    main {
+        padding: 1rem;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-rows: auto;
+    }
+
+    .course-card {
+        padding-top: 30px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: .5rem;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    td {
+        text-align: left;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 45%;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+}
